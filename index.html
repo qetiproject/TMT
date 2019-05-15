@@ -8,8 +8,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<title> TMT - მთავარი </title>
-
+	<!--  swiper.min.css-->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/css/swiper.min.css">
+	<!--datedropper.css  -->
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/datedropper.css">
+	<!--ion.rangeSlider.min.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/css/ion.rangeSlider.min.css"/>
+
 	<!-- custom css -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
@@ -22,19 +27,19 @@
 		<nav id="menu">
 			<ul id="header_navigation" class="header_navigation">
 				<li>
-					<a class="header_navigation_link" href="!#" title="ტურები">ტურები</a>
+					<a class="header_navigation_link" href="#!" title="ტურები">ტურები</a>
 				</li>
 				<li>
-					<a class="header_navigation_link" href="!#" title="სასტუმროები">სასტუმროები</a>
+					<a class="header_navigation_link" href="#!" title="სასტუმროები">სასტუმროები</a>
 				</li>
 				<li>
 					<a class="header_navigation_link" href="gallery.html" title="ფოტო გალერეა">ფოტო გალერეა</a>
 				</li>
 				<li>
-					<a class="header_navigation_link" href="!#" title="ბლოგი">ბლოგი</a>
+					<a class="header_navigation_link" href="#!" title="ბლოგი">ბლოგი</a>
 				</li>
 				<li>
-					<a class="header_navigation_link" href="!#" title="კონტაქტი">კონტაქტი</a>
+					<a class="header_navigation_link" href="#!" title="კონტაქტი">კონტაქტი</a>
 			</li>
 			</ul>
 		</nav>
@@ -43,9 +48,11 @@
 			<li class="lang_li"><a class="lang_active" href="!#" title="Eng">Eng</a></li>
 		</ul>
 		<!-- navbar_toggler -->
-		<div class="navbar-toggler">
-			<span></span>
-		</div>
+		<ul class="resp_menu">
+			<li class="navbar-toggler">
+				<span class="toggler_item"></span>
+			</li>
+		</ul>
 		<!-- navbar_toggler end -->
 	</header>
 	<!-- header end -->
@@ -59,6 +66,8 @@
 						<h1 class="description_title">მშვენიალური ტური ზღვაზე და არა მარტო</h1>
 					</div>
 					<p>ლორემ იპსუმ დაშნაზე ძაბნა ბახი დაჯდებოდა გამინახევრდა ინსტრუმენტიცაა ხვნეშოდა. ინსტრუმენტიცაა რომელთან გააერთიანოს ბილეთის გიორგი დაპყრობაზე იმიჯის. ემზარის დააღო მოიხვეჭა ანთებული ტყვი გიორგი მადააშლილი.</p>
+					<p>
+  
 					<a href="#!" class="more">სრულად ნახვა</a>
 				</div>
 			</li>
@@ -87,143 +96,143 @@
 	<!-- tours -->
 	<section class="tours">
 		<div class="container">
-		<h2 class="category_title">პოპულარული ტურები</h2>
-		<div class="swiper-container tours_slider_container">
-			<ul class="swiper-wrapper">
-				<li class="swiper-slide tours_slider">
-					<img src="assets/images/tours1.png" alt="tours1">
-					<div class="tours_slider_description">
-						<div class="tours_slider_description_left">
-							<div class="calendar_info">
-								<span class="icon-calendar"></span>
-								<p>16.04-20.04</p>
+			<h2 class="category_title">პოპულარული ტურები</h2>
+			<div class="swiper-container tours_slider_container slider_container">
+				<ul class="swiper-wrapper">
+					<li class="swiper-slide tours_slider">
+						<img src="assets/images/tours1.png" alt="tours1">
+						<div class="tours_slider_description">
+							<div class="tours_slider_description_left">
+								<div class="calendar_info">
+									<span class="icon-calendar"></span>
+									<p>16.04-20.04</p>
+								</div>
+								<span class="icon-sea"></span>
 							</div>
-							<span class="icon-sea"></span>
+							<section class="tours_slider_description_right">
+								<h3 class="tours_slider_title">
+									<a href="#!">ზღვა და კაი ცხოვრება</a>
+								</h3>
+								<p>ლორემ იპსუმ დამტუქსა უსულო კესოზედ გადაიხვეწებოდა ჰიუ ღიად დაერეოდნენ, მაწანწალაა ვიცხოვრებდი დარეჯანო. </p>
+							</section>
 						</div>
-						<section class="tours_slider_description_right">
-							<h3 class="tours_slider_title">
-								<a href="#!">ზღვა და კაი ცხოვრება</a>
-							</h3>
-							<p>ლორემ იპსუმ დამტუქსა უსულო კესოზედ გადაიხვეწებოდა ჰიუ ღიად დაერეოდნენ, მაწანწალაა ვიცხოვრებდი დარეჯანო. </p>
-						</section>
-					</div>
-				</li>
-				<li class="swiper-slide tours_slider">
-					<img src="assets/images/tours2.png" alt="tours2">
-					<div class="tours_slider_description">
-						<div class="tours_slider_description_left">
-							<div class="calendar_info">
-								<span class="icon-calendar"></span>
-								<p>16.04-20.04</p>
+					</li>
+					<li class="swiper-slide tours_slider">
+						<img src="assets/images/tours2.png" alt="tours2">
+						<div class="tours_slider_description">
+							<div class="tours_slider_description_left">
+								<div class="calendar_info">
+									<span class="icon-calendar"></span>
+									<p>16.04-20.04</p>
+								</div>
+								<span class="icon-mountains"></span>
 							</div>
-							<span class="icon-mountains"></span>
+							<section class="tours_slider_description_right">
+								<h3 class="tours_slider_title">
+									<a href="#!">მთა და უკეთესი ცხოვრება</a>
+								</h3>
+								<p>ლორემ იპსუმ დამტუქსა უსულო კესოზედ გადაიხვეწებოდა ჰიუ ღიად დაერეოდნენ, მაწანწალაა ვიცხოვრებდი დარეჯანო. </p>
+							</section>
 						</div>
-						<section class="tours_slider_description_right">
-							<h3 class="tours_slider_title">
-								<a href="#!">მთა და უკეთესი ცხოვრება</a>
-							</h3>
-							<p>ლორემ იპსუმ დამტუქსა უსულო კესოზედ გადაიხვეწებოდა ჰიუ ღიად დაერეოდნენ, მაწანწალაა ვიცხოვრებდი დარეჯანო. </p>
-						</section>
-					</div>
-				</li>
-				<li class="swiper-slide tours_slider">
-					<img src="assets/images/tours3.png" alt="tours3">
-					<div class="tours_slider_description">
-						<div class="tours_slider_description_left">
-							<div class="calendar_info">
-								<span class="icon-calendar"></span>
-								<p>16.04-20.04</p>
+					</li>
+					<li class="swiper-slide tours_slider">
+						<img src="assets/images/tours3.png" alt="tours3">
+						<div class="tours_slider_description">
+							<div class="tours_slider_description_left">
+								<div class="calendar_info">
+									<span class="icon-calendar"></span>
+									<p>16.04-20.04</p>
+								</div>
+								<span class="icon-hiking"></span>
 							</div>
-							<span class="icon-hiking"></span>
+							<section class="tours_slider_description_right">
+								<h3 class="tours_slider_title">
+									<a href="#!">ლაშქრობა მთაში არ იქნებოდა ურიგო გადაწყვეტილება</a>
+								</h3>
+								<p>ლორემ იპსუმ დამტუქსა უსულო კესოზედ გადაიხვეწებოდა ჰიუ ღიად დაერეოდნენ. </p>
+							</section>
 						</div>
-						<section class="tours_slider_description_right">
-							<h3 class="tours_slider_title">
-								<a href="#!">ლაშქრობა მთაში არ იქნებოდა ურიგო გადაწყვეტილება</a>
-							</h3>
-							<p>ლორემ იპსუმ დამტუქსა უსულო კესოზედ გადაიხვეწებოდა ჰიუ ღიად დაერეოდნენ. </p>
-						</section>
-					</div>
-				</li>
-				<li class="swiper-slide tours_slider">
-					<img src="assets/images/tours2.png" alt="tours2">
-					<div class="tours_slider_description">
-						<div class="tours_slider_description_left">
-							<div class="calendar_info">
-								<span class="icon-calendar"></span>
-								<p>16.04-20.04</p>
+					</li>
+					<li class="swiper-slide tours_slider">
+						<img src="assets/images/tours2.png" alt="tours2">
+						<div class="tours_slider_description">
+							<div class="tours_slider_description_left">
+								<div class="calendar_info">
+									<span class="icon-calendar"></span>
+									<p>16.04-20.04</p>
+								</div>
+								<span class="icon-mountains"></span>
 							</div>
-							<span class="icon-mountains"></span>
+							<section class="tours_slider_description_right">
+								<h3 class="tours_slider_title">
+									<a href="#!">მთა და უკეთესი ცხოვრება</a>
+								</h3>
+								<p>ლორემ იპსუმ დამტუქსა უსულო კესოზედ გადაიხვეწებოდა ჰიუ ღიად დაერეოდნენ, მაწანწალაა ვიცხოვრებდი დარეჯანო. </p>
+							</section>
 						</div>
-						<section class="tours_slider_description_right">
-							<h3 class="tours_slider_title">
-								<a href="#!">მთა და უკეთესი ცხოვრება</a>
-							</h3>
-							<p>ლორემ იპსუმ დამტუქსა უსულო კესოზედ გადაიხვეწებოდა ჰიუ ღიად დაერეოდნენ, მაწანწალაა ვიცხოვრებდი დარეჯანო. </p>
-						</section>
-					</div>
-				</li>
-			</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
-	</div>
 	</section>
 	<!-- tours end -->
 	<!-- categories -->
 	<section class="categories">
 		<div class="container">
-		<h2 class="category_title">კატეგორიები</h2>
-		<div class="categories_slider_wrapper">
-			<div class="swiper-container categories_slider_container">
-				<ul class="swiper-wrapper">
-					<li class="swiper-slide categories_slider">
-						<div class="categories_slider_content">
-							<span class="icon-sea"></span>
-							<a href="#!"><span class="icon-next"></span></a>
-						</div>
-						<h3 class="categories_slider_title">რამდენიმე ადგილას რომ შეგიძლია წახვიდე</h3>
-					</li>
-					<li class="swiper-slide categories_slider">
-						<div class="categories_slider_content">
-							<span class="icon-mountains"></span>
-							<a href="#!"><span class="icon-next"></span></a>
-						</div>
-						<h3 class="categories_slider_title">ტურები ღია ცის ქვეშ და კიდე</h3>
-					</li>
-					<li class="swiper-slide categories_slider">
-						<div class="categories_slider_content">
-							<span class="icon-hiking"></span>
-							<a href="#!"><span class="icon-next"></span></a>
-						</div>
-						<h3 class="categories_slider_title">ლაშქრობები</h3>
-					</li>
-					<li class="swiper-slide categories_slider">
-						<div class="categories_slider_content">
-							<span class="icon-sea"></span>
-							<a href="#!"><span class="icon-next"></span></a>
-						</div>
-						<h3 class="categories_slider_title">რამდენიმე ადგილას რომ შეგიძლია წახვიდე</h3>
-					</li>
-					<li class="swiper-slide categories_slider">
-						<div class="categories_slider_content">
-							<span class="icon-hiking"></span>
-							<a href="#!"><span class="icon-next"></span></a>
-						</div>
-						<h3 class="categories_slider_title">ლაშქრობები</h3>
-					</li>
-				</ul>
-			</div>
-			<div class="more_categories_slider">
-				<h4>ყველა კატეგორია</h4>
-				<a href="category.html"><span class="icon-next more_icon"></span></a>
+			<h2 class="category_title">კატეგორიები</h2>
+			<div class="categories_slider_wrapper slider_container">
+				<div class="swiper-container categories_slider_container">
+					<ul class="swiper-wrapper">
+						<li class="swiper-slide categories_slider">
+							<div class="categories_slider_content">
+								<span class="icon-sea"></span>
+								<a href="#!"><span class="icon-next"></span></a>
+							</div>
+							<h3 class="categories_slider_title">რამდენიმე ადგილას რომ შეგიძლია წახვიდე</h3>
+						</li>
+						<li class="swiper-slide categories_slider">
+							<div class="categories_slider_content">
+								<span class="icon-mountains"></span>
+								<a href="#!"><span class="icon-next"></span></a>
+							</div>
+							<h3 class="categories_slider_title">ტურები ღია ცის ქვეშ და კიდე</h3>
+						</li>
+						<li class="swiper-slide categories_slider">
+							<div class="categories_slider_content">
+								<span class="icon-hiking"></span>
+								<a href="#!"><span class="icon-next"></span></a>
+							</div>
+							<h3 class="categories_slider_title">ლაშქრობები</h3>
+						</li>
+						<li class="swiper-slide categories_slider">
+							<div class="categories_slider_content">
+								<span class="icon-sea"></span>
+								<a href="#!"><span class="icon-next"></span></a>
+							</div>
+							<h3 class="categories_slider_title">რამდენიმე ადგილას რომ შეგიძლია წახვიდე</h3>
+						</li>
+						<li class="swiper-slide categories_slider">
+							<div class="categories_slider_content">
+								<span class="icon-hiking"></span>
+								<a href="#!"><span class="icon-next"></span></a>
+							</div>
+							<h3 class="categories_slider_title">ლაშქრობები</h3>
+						</li>
+					</ul>
+				</div>
+				<div class="more_categories_slider">
+					<h4>ყველა კატეგორია</h4>
+					<a href="category.html"><span class="icon-next more_icon"></span></a>
+				</div>
 			</div>
 		</div>
-	</div>
 	</section>
 	<!-- categories end -->
 	<!-- search_tours -->
 	<section class="search_tours">
 		<div class="container">
 			<h2 class="category_title">იპოვეთ სასურველი ტური</h2>
-			<div class="choose_tours_wrapper">
+			<div class="choose_tours_wrapper slider_container">
 				<div class="choose_tours">
 					<div class="choose_country">
 						<select name="choose_country">
@@ -239,6 +248,22 @@
 							<option value="ზღვა">ზღვა</option>
 						</select>
 					</div>
+					<div class="time_box when">
+						<input  class="calendar" type="text" value="როდიდან" data-large-mode="true">
+					</div>
+					<div class="time_box from">
+						<input  class="calendar" type="text" value="როდემდე" data-large-mode="true">
+					</div>
+				</div>
+				<div class="price_range">
+					<h4>ფასი: </h4>
+					<span class="price_slider">
+						<input type="text" class="js-range-slider" name="my_range" value=""/>
+					</span>
+					<span class="price_range_values">
+						<input type="text" name="start_value" class="start_value" value="200">
+						<input type="text" name="finish_value" class="finish_value" value="500">
+					</span>
 				</div>
 				<div class="btn">
 					<button class="search_btn">ძებნა</button>
@@ -308,10 +333,18 @@
 	</footer>
 	<!-- footer end -->
 
-	<script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<!-- <script src ="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+	 <!--jQuery-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- Swiper -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.5.0/js/swiper.min.js"></script>
-	<script src="assets/js/script.js"></script>
+	<!-- Datedropper -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/datedropper/2.0/datedropper.js"></script>
+    <!--Ion RangeSlider-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.0/js/ion.rangeSlider.min.js"></script>
+
+	<script src="assets/js/script.js"></script> 
 
 	<!-- რუკის სკრიპტი -->
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAuRcIwPvtXg2F-WtS4Eoa44yRkeRmuAPo&callback=initMap"

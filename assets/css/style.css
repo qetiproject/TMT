@@ -23,12 +23,25 @@ select {
 	font-family: BPG_SSP_Caps;
 	src: url(../fonts/BPG_SSP_Caps.ttf);
 }
+@keyframes fadeInRight {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+button {
+	border: none;
+}
 /*breadcrumbs*/
 .breadcrumbs {
     display: flex;
     max-width: 1185px;
 	margin: 0 auto;
-	padding: 30px 0;
+	padding: 30px 5px;
 }
 .breadcrumbs_item {
     display: flex;
@@ -52,6 +65,7 @@ select {
 	font-size: 20px;
 }
 /*breadcrumbs end*/
+
 /*header*/
 header {
 	max-width: 1185px;
@@ -63,14 +77,6 @@ header {
 }
 header a {
 	font-family: BPG_SSP_Caps;
-}
-.logo {
-	width: 173px;
-    height: 100%;
-    background: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 nav {
     width: 881px;
@@ -88,14 +94,6 @@ nav {
 }
 .header_navigation a:hover {
 	color: #767373;
-}
-.lang {
-	width: 140px;
-	height: 100%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #1A1A1A;
 }
 .lang_li {
     display: flex;
@@ -139,7 +137,6 @@ header::after{
 	top: -65px;
 	left: 0;
 	right: 0;
-	z-index: -1;
 }
 a.more {
 	display: inline-block;
@@ -157,9 +154,6 @@ a.more:hover {
 .hero_slider_container .swiper-button-next, .hero_slider_container .swiper-button-prev {
 	background-image: none;
 } 
-.slider-arrows {
-	display: flex;
-}
 .hero_slider_arrows {
 	width: 80px;
 	position: static;
@@ -251,7 +245,7 @@ a.more:hover {
 .categories_slider_content .icon-next {
 	position: absolute;
     top: 50%;
-	right: -18px;
+	right: -10px;
 }
 .categories_slider_title {
     font-size: 15px;
@@ -264,7 +258,7 @@ a.more:hover {
     align-items: flex-end;
 }
 .more_icon {
-    width: 100px;
+    width: 80px;
     display: flex;
     justify-content: flex-end;
     color: #fff;
@@ -275,30 +269,31 @@ a.more:hover {
 /*categories end*/
 /*search_tours*/
 .search_tours {
-	margin: 20px;
-}
-.choose_tours_wrapper {
 	position: relative;
-	background-color: #fff;
 }
-.choose_tours {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-gap: 10px;
-	padding: 100px;
-}
-.choose_country, .choose_category {
-	position: relative;
+.choose_country, .choose_category, .time_box {
 	width: 237px;
-	background-color: pink;
+	position: relative;
+	background-color: #1A1A1A;
 }
 .choose_country select, .choose_category select {
-	position: relative;
-	border: 1px solid #F2F2F2;
-    border-radius: 4px;
-    padding: 20px;
     width: calc(100% - 48px);
+	position: relative;
     left: 48px;
+    border: 1px solid #1A1A1A;
+	border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding: 20px;
+}
+.time_box input {
+    width: calc(100% - 48px);
+    height: 100%;
+	position: relative;
+    left: 48px;
+    border: 1px solid #1A1A1A;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    padding: 20px;
 }
 .choose_country::after, .choose_category::after {
     content: '';
@@ -318,9 +313,8 @@ a.more:hover {
     width: 48px;
     height: 100%;
     position: absolute;
-    left: 0;
-    top: 0;
-    background: #1A1A1A;
+    top: 15px;
+    left: 10px;
 }
 .choose_category::before {
 	content: url(../images/static/mountains.svg);
@@ -328,20 +322,46 @@ a.more:hover {
     width: 48px;
     height: 100%;
     position: absolute;
-    left: 0;
-    top: 0;
-    background: #1A1A1A;
+    top: 15px;
+    left: 10px;
 }
-.btn {
-	position: absolute;
-	bottom: 0;
-	right: 0;
+.time_box.when::before {
+	content: url(../images/icons/time_box_icon1.svg);
+	display: block;
+	width: 48px;
+    height: 100%;
+    position: absolute;
+    top: 15px;
+    left: 10px;
 }
-.search_btn {
-	color: #fff;
-	padding: 15px 30px;
-	background-color: #1A1A1A;
-}
+.time_box.from::before {
+	content: url(../images/icons/time_box_icon2.svg);
+	display: block;
+	width: 48px;
+    height: 100%;
+    position: absolute;
+    top: 15px;
+    left: 10px;
+ }
+ /*price_range*/
+ .price_slider {
+ 	width: 290px;
+ 	padding: 0 30px;
+ }
+ .price_range_values {
+ 	display: flex;
+ 	justify-content: center;
+ 	align-items: center;
+ }
+ .price_range_values input {
+ 	width: 75px;
+ 	margin-right: 10px;
+ 	box-sizing: border-box;
+ }
+ /*price_range end*/
+ .search_btn:hover {
+ 	cursor: pointer;
+ }
 /*search_tours*/
 /*footer*/
 .footer_wrapper::before {

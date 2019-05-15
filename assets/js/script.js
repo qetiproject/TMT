@@ -26,14 +26,12 @@ function navbarTogglerClick() {
       disableOnInteraction: false,
     },
     breakpoints: {
+ 
+    // when window width is <= 1279px
     // when window width is <= 839px
     839: {
       slidesPerView: 1,
       spaceBetween: 10
-    },
-    // when window width is <= 1279px
-    1279: {
-      slidesPerView: 2,
     },
   }
 });
@@ -41,21 +39,21 @@ function navbarTogglerClick() {
   var categories_slider = new Swiper('.categories_slider_container', {
     slidesPerView: 4,
     spaceBetween: 30,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
+    // autoplay: {
+    //   delay: 2500,
+    //   disableOnInteraction: false,
+    // },
     breakpoints: {
-    // when window width is <= 839px
+    // when window width is <= 599px
     599: {
       slidesPerView: 1,
       spaceBetween: 10
     },
-    // when window width is <= 1279px
-    719: {
+    // when window width is <= 719px
+    839: {
       slidesPerView: 2,
     },
-    839: {
+    1279: {
       slidesPerView: 3,
     },
   }
@@ -109,5 +107,24 @@ function navbarTogglerClick() {
       },
       thumbs: {
         swiper: galleryThumbs,
+      },
+    });
+
+    // კალენდარი
+    $('.calendar').dateDropper();
+
+    // Ion RangeSlider
+    $(".js-range-slider").ionRangeSlider({
+      type: "double",
+      min: 0,
+      max: 1000,
+      from: 200,
+      to: 500,
+      skin: "square",
+      onChange: function (data) { 
+        $('.start_value').val(data.from_pretty);
+      },
+      onFinish: function (data) {
+        $('.finish_value').val(data.to_pretty);
       },
     });

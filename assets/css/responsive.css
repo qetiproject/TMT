@@ -9,35 +9,57 @@
 		display: none;
 	}
 	/*navbar-toggler*/
-	.navbar-toggler {
-		width: 40px;
+	.resp_menu {
+		width: 68px;
 		height: 100%;
 		display: flex;
 		justify-content: center;
-		align-items: center;
-		color: #fff;
+		position: relative;
 		order: 2;
-		padding: 0 50px;
+		padding: 0 22px;
 		cursor: pointer;
-		background-color: #1A1A1A;
+		background-color: #000;
 	}
-	.navbar-toggler span, .navbar-toggler span::before, .navbar-toggler span::after {
+	.navbar-toggler {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.toggler_item {
 		content: '';
 		display: block;
-		height: 3px;
-		width: 30px;
+		height: 5px;
+		width: 24px;
 		background-color: #fff;
 		border-radius: 10px;
 		transition: all ease-in-out 0.3s;
 	}
-	.navbar-toggler span::before {
-		transform: translateY(-8px);
+	.toggler_item::before {
+		content: '';
+		display: block;
+		height: 5px;
+		width: 24px;
+		position: absolute;
+		top: 20px;
+		left: 27px;
+		background-color: #fff;
+		border-radius: 10px;
+		transition: all ease-in-out 0.3s;
 	}
-	.navbar-toggler span::after {
-		transform: translateY(5px);
+	.toggler_item::after {
+		content: '';
+		display: block;
+		height: 5px;
+		width: 24px;
+		background-color: #fff;
+		border-radius: 10px;
+		transition: all ease-in-out 0.3s;
+		position: absolute;
+		bottom: 20px;
+		left: 27px;
 	}
-	.navbar-toggler.open-navbar-toggler span {
-		background-color: transparent;
+	.navbar-toggler.open-navbar-toggler .toggler_item {
+		margin-left: 20px;
 	}
 	nav.open {
 		display: flex;
@@ -48,8 +70,9 @@
 		left: 0;
 		z-index: 1;
 		background-color: #000;
-		transition: background 0.5s ease-in-out, visibility 0.5s;
+		animation: fadeInRight .5s forwards
 	}
+	
 	nav.open .header_navigation {
 		width: 100%;
 		display: flex;
@@ -61,7 +84,22 @@
 	}
 	/*toggler end*/
 	.lang {
-		order: 1;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		background-color: #1A1A1A;
+	}
+	.logo {
+		width: 90%;
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.logo nav.open {
+		width: 174px;
 	}
 	/*header end*/
 	/*hero_slider*/
@@ -110,12 +148,47 @@
 		margin: 0 auto;
 	}
 	/*tours_slider*/
-	/*categories_slider*/
-	.categories_slider_wrapper {
+	/*search_tours*/
+	.choose_tours_wrapper {
+	    display: flex;
+    	flex-flow: column wrap;
+    	align-items: center;
+		position: relative;
+		margin-bottom: 150px;
+		background-color: #fff;
+	}
+	.choose_tours {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 15px; 
+		padding: 30px;
+	}
+	.btn {
+		padding: 10px 0;
+	}
+	.search_btn {
+		display: block;
+		color: #fff;
+		padding: 15px 30px;
+		margin: auto;
+		background-color: #1A1A1A;
+	}
+	.search_tours::after {
+		content: url(../images/static/bg2.png);
+		display: block;
+		position: absolute;
+		bottom: -150px;
+		z-index: -1;
+	}
+	.price_range {
+		width: 520px;
 		display: flex;
 		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		margin: 0 25px;
 	}
-	/*categories_sldier*/
+	/*search_tours end*/
 	/*footer*/
 	.footer {
 		display: grid;
@@ -157,6 +230,7 @@
 	.gallery_item_wrapper {
 		display: grid;
 		grid-template-columns: 1fr;
+		grid-gap: 10px;
 	}
 	.gallery_item {
 		margin: 0 auto;
@@ -175,6 +249,13 @@
 		display: flex;
 		flex-direction: row;
 	}
+	.choose_tours {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.price_range {
+		flex-direction: row;
+		justify-content: space-between;
+	}
 		/*main_page end*/
 }
 @media only screen and (min-width: 840px) {
@@ -192,8 +273,23 @@
 		display: flex;
 		align-items: center;
 	}
-	.navbar-toggler {
+	.resp_menu {
 		display: none;
+	}
+	.lang {
+		width: 140px;
+		justify-content: center;
+	}
+	.logo {
+		width: 173px;
+		height: 100%;
+		background: transparent;
+	}
+	.slider_container {
+		max-width: 100%;
+	}
+	.choose_tours_wrapper {
+		align-items: flex-start;
 	}
 	.footer {
 		display: grid;
@@ -244,6 +340,7 @@
 		position: relative;
 		top: -30px;
 		right: 10px;
+		overflow-y: scroll;
 	}
 	/*about_content end*/
 		/*about page end*/
@@ -251,6 +348,18 @@
 @media only screen and (min-width: 1185px) {
 	.container {
 		padding: 0;
+	}
+	.choose_tours {
+		grid-template-columns: repeat(4, 1fr);
+		padding: 40px 25px 35px;
+	}
+	.btn {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+	}
+	.search_btn {
+		margin: 0;
 	}
 }
 @media only screen and (min-width: 1280px) {
@@ -270,6 +379,10 @@
 		left: -100px;
 	}
 	/*hero_slider end*/
+	.search_tours::after {
+		left: 50%;
+		transform: translate(-50%);
+	}
 		/*main page end*/
 	/*about_page*/
 	.about_info {
