@@ -101,14 +101,14 @@ button {
 .header_wrapper {
 	max-width: 1185px;
 	margin: 0 auto;
-	position: relative;
-	z-index: 2;
 }
 header {
 	height: 65px;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
+	position: relative;
+	z-index: 2;
 }
 header a {
 	font-family: BPG_SSP_Caps;
