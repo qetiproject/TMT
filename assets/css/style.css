@@ -162,6 +162,7 @@ nav {
 	width: calc((100vw - 1185px) / 2 );
 	height: 65px;
 	position: absolute;
+	top: 0;
 	right: 0;
 	background-color: #1A1A1A;
 }
